@@ -1,7 +1,7 @@
 # ReX-HSIC 🛰️
 **Rethinking HyperSpectral Image Classification (HSIC) Benchmark with Explainability (xAI) under a Causal Estimation Perspective**
 
-> *Published in the Proceedings of the Workshops of the EDBT/ICDT 2026 Joint Conference (March 24–27, 2026), Tampere, Finland.*
+> *Published in the Proceedings of the XAI4Science Workshop of the EDBT/ICDT 2026 Joint Conference (March 24–27, 2026), Tampere, Finland.*
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
@@ -92,8 +92,15 @@ Place the dataset files in the `datasets/` folder following the structure above.
 chmod +x run.sh
 
 # Run
-./run.sh
+./run.sh ip split3
 ```
+#### Key arguments
+
+| Argument | Description | Options |
+|----------|-------------|---------|
+| `--dataset_name` | Target dataset | `ip`, `pu`, `sa` |
+| `--split_strategy` | Data partitioning protocol | `random`, `split3` |
+
 
 ### Option B — Individual run
 
