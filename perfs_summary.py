@@ -9,7 +9,7 @@ if __name__=="__main__":
     
     dataset_names = ["ip", "pu", "sa"]
     split_strategies = ["random", "split3"]
-    model_names = ["dsformer", "ssrn", "hamidaetal", "vit", "spectralformer"] 
+    model_names = [("dsformer", 11), ("ssrn", 7), ("hamidaetal", 5), ("vit",7), ("spectralformer", 7)]  
     
     
     for dataset_name in dataset_names:
@@ -31,11 +31,11 @@ if __name__=="__main__":
         df = df.astype(object)
         
         
-        for model_name in model_names:
+        for model_name, ps in model_names:
     
             for split_strategy in split_strategies:
      
-                log_dir=os.path.join("runs", dataset_name, model_name, split_strategy)
+                log_dir=os.path.join("runs", dataset_name, model_name, str(ps), split_strategy)
                 
                 # Get best model config
                 path = os.path.join(log_dir, "aggregate_results.json")

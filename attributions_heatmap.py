@@ -15,18 +15,18 @@ if __name__=="__main__":
     methods = ["ig"]
     dataset_names = ["ip", "pu", "sa"]
     split_strategies = ["random", "split3"]
-    model_names = ["dsformer", "ssrn", "hamidaetal", "vit", "spectralformer"] 
+    model_names = [("dsformer", 11), ("ssrn", 7), ("hamidaetal", 5), ("vit",7), ("spectralformer", 7)]  
     
     for method in methods:
         for dataset_name in dataset_names: 
-            for model_name in model_names:
+            for model_name, ps in model_names:
                 strategy_attributions = {
                     strat: None for strat in split_strategies
                     }
                 
                 for split_strategy in split_strategies:
                     
-                    log_dir=os.path.join("runs", dataset_name, model_name, split_strategy)
+                    log_dir=os.path.join("runs", dataset_name, model_name, str(ps), split_strategy)
                     
                     # Get best model config
                     path = os.path.join(log_dir, "best_overall_config.json")

@@ -91,7 +91,7 @@ if __name__ == "__main__":
     parser.add_argument('--n_comps', type=int, default=0, help='Number principal components')
     parser.add_argument('--optim_metric', default='accuracy', help='Metric that optimize')
     parser.add_argument('--lr', type=float, default=3e-4, help='learning rate')
-    parser.add_argument('--batch_size', type=int, default=128, help='batch size')
+    parser.add_argument('--batch_size', type=int, default=256, help='batch size')
     parser.add_argument('--eval_step', type=int, default=3, help='number of evaluation')
     parser.add_argument('--weight_decay', type=float, default=3e-7, help='weight_decay')
     parser.add_argument("--n_runs", type=int, default=4, help="Number of run on cross validation")

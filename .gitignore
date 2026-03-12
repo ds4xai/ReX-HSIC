@@ -212,3 +212,7 @@ not up/
 runs/
 *.mat
 notebooks/*
+images/ip/
+images/pu/
+images/sa/
+logs/

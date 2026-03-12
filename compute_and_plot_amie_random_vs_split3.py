@@ -20,7 +20,7 @@ if __name__=="__main__":
     intervention_types = ["ablation"]#, "permutation"]
     dataset_names = ["ip", "pu", "sa"]
     split_stramiegies = ["random", "split3"]
-    model_names = [("dsformer", 11), ("ssrn", 7), ("hamidaetal", 5), ("vit_patchwise",7)]#, "spectralformer_patchwise"] 
+    model_names = [("dsformer", 11), ("ssrn", 7), ("hamidaetal", 5), ("vit",7), ("spectralformer", 7)] 
     
     
     for value_over_compute_amie in value_over_compute_amies:
@@ -52,9 +52,9 @@ if __name__=="__main__":
                     for split_strategy in split_stramiegies:
                         data_model[split_strategy]={
                             "means":[], 
-                            "ci": [] } #ci : confidence interval: 
+                            "ci": [] } #ci : confidence interval
                         
-                        log_dir=os.path.join("runs", dataset_name, model_name, str(patch_size))
+                        log_dir=os.path.join("runs", dataset_name, model_name, str(patch_size), split_strategy)
                 
                         # Get best model config
                         path = os.path.join(log_dir, "best_overall_config.json")
