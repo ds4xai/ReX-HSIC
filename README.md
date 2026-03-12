@@ -1,7 +1,7 @@
 # ReX-HSIC 🛰️
 **Rethinking HyperSpectral Image Classification (HSIC) Benchmark with Explainability (xAI) under a Causal Estimation Perspective**
 
-> *Published in the Proceedings of the XAI4Science Workshop of the EDBT/ICDT 2026 Joint Conference (March 24–27, 2026), Tampere, Finland.*
+> *Published in the Proceedings of the XAI4Science Workshop of the EDBT/ICDT 2026 (https://mlinardicyu.github.io/edbt_XAI4Science/) Joint Conference (March 24–27, 2026), Tampere, Finland.*
 
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.0+-red.svg)](https://pytorch.org/)
